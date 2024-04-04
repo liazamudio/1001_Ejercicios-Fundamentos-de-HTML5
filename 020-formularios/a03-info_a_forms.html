@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ 		<title> Programador de citas médicas </title>
+	</head>
+	 <body>
+        <h1 class="blue">Programador de citas médicas</h1>
+  	    <p>Introduce la información que se te solicita:</p>
+        <form method="post" action="/projects/1">
+
+            <fieldset id="personal_information">                                        <!-- Datos personales -->
+                <legend>Datos personales</legend>
+                    <p> <label for="name">Nombre: <input type="text" name="name" autofocus="autofocus" required /></p> </label>
+                    <p> <label for="name">Número de teléfono: <input type="text" name="phone" autofocus="autofocus" pattern="[2-9][0-9]{2}-[0-9]{3}-[0-9]{4}" required /></label> </p>
+                    <p> <label for="name">Dirección de correo electrónico: <input type="email" name="email" autofocus="autofocus" required/> </label> </p>
+                    <p> <label for="name">Fecha de nacimiento: <input type="date" name="birthday" autofocus="autofocus" required /> </label> </p>
+            </fieldset>
+            <br>
+            <fieldset id="meeting_request">                                             <!-- Solicitud de cita -->
+                <legend>Solicitud de cita</legend>
+                    <p><label>¿Cuál es el motivo de su visita? <input type="text" name="mot_visita" list="mot_visita" required></label></p>
+                        <datalist id="mot_visita">
+                            <option value="Revisión física anual">Revisión física anual</option>
+                            <option value="Síntomas de resfriado o gripe">Síntomas de resfriado o gripe</option>
+                            <option value="Prueba de sangre">Prueba de sangre</option>
+                            <option value="Postoperatorio">Postoperatorio</option>
+                            <option value="Otro caso">Otro caso</option>
+                        </datalist>
+                    <p><label>Nivel de dolor actual <input type="range" name="volume" min="0" max="10" step=".5" value="5" title="0 no hay dolor, 10 es el peor dolor imaginable"></label></p>
+                    <p>  <label for="name">Fecha preferida <input type="date" name="preferred-date" autofocus="autofocus" required/> </label> </p>
+                    <p> <label for="name">Hora preferida <input type="time" name="preferred-hour" min="08:00" max="18:00" step=3600 required /> </label> </p>
+
+            </fieldset>
+            <br>
+            <input type="submit" value="Continuar"/>                                    <!-- Enviar información -->
+        </form>
+	</body>
+</html>

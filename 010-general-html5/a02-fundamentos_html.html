@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ 		<title> Pantalla de Login </title>
+	</head>
+
+	 <body>
+        <h1 class="blue">Pantalla de login</h1>
+  	    <p>Para poder acceder, introduce por favor tu <strong>nombre de usuario</strong> y tu <strong>contraseña</strong>.</p>
+  	    <hr />
+
+        <form method="post" action="/projects/1">
+            <fieldset id="personal_information">
+                <legend>Iniciar sesión</legend>
+                <ul>
+                    <li>
+                        <label for="name">Usuario</label>
+                        <input type="text" name="name" autofocus="autofocus"/>
+                    </li>
+                    <li>
+                        <label for="name">Contraseña</label>
+                        <input type="text" name="contrasena" autofocus="autofocus"/>
+                    </li>
+                        <input type="submit" value="Continuar"/>
+                </ul>
+            </fieldset>
+        </form>
+	</body>
+</html>
